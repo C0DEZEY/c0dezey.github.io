@@ -1,0 +1,342 @@
+html {
+    height: 100%;
+scroll-behavior: smooth;
+}
+
+.materhead {
+height: 1000px;
+}
+
+
+section {
+    width: 100%;
+    float: left;
+    height: auto;
+    position: relative;
+}
+body {
+    background-color: rgb(35, 39, 42);
+background-image: linear-gradient(to right,rgb(0, 0, 0) ,rgb(7, 7, 27));
+    height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+                overflow: scroll;
+                    overflow-x: hidden;
+                    
+}
+body:-webkit-scrollbar {
+    display: none;
+}
+
+.Codezey {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(240, 248, 255);
+    position: relative;
+    left: 75px;
+    top:25%
+    
+}
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(240, 248, 255, 0.459);
+    position: relative;
+left: 75px;
+top: 25%
+}
+
+.head {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(240, 248, 255, 0.616);
+    position: relative;
+    left: 75px;
+    top: 25%
+}
+.title {
+        font-family: Arial, Helvetica, sans-serif;
+            color: rgba(240, 248, 255, 0.459);
+            position: relative;
+                display: flex;
+}
+
+.About {
+    border-radius: 50px;
+        border: none;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: aliceblue;
+        position: absolute;
+        top: 35px;
+        right: 300px;
+        cursor: pointer;
+        margin: 5px;
+        padding: 10px;
+        text-decoration: none;
+        width: 100px;
+}
+.Projects {
+    border-radius: 50px;
+
+        border: none;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: aliceblue;
+        position: absolute;
+        top: 35px;
+        right: 200px;
+        cursor: pointer;
+        margin: 5px;
+        padding: 10px;
+        width: 100px;
+        text-decoration: none;
+}
+.contact {
+    border-radius: 50px;
+    background-color: #62557aa9;
+    border: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    width: 100px;
+    text-decoration: none;
+}
+
+
+#home {
+    background-color:linear-gradient(to right, rgb(0, 0, 0), rgb(7, 7, 27));
+}
+
+#projects {
+background-color: rgb(13, 14, 15)
+}
+
+
+#about {
+    background-color: rgb(13, 14, 15)
+}
+#contact2 {
+    background-color: rgb(13, 14, 15)
+}
+.contact:hover{
+    background-color: #62557a;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+.container {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    background: rgba(34, 34, 34, 0.333);
+}
+.card-grid {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+.card {
+    --padding: 1rem;
+    background: rgba(63, 63, 63, 0.218);
+    border-radius: .25rem;
+    overflow:hidden;
+}
+
+.card.card-shadow {
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.card-header {
+        font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        border-radius: 15px;
+    font-size: 1.5rem;
+    padding: var(--padding);
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+}
+
+.card-header.card-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-header.card-image>img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+
+.card:hover>.card-header.card-image>img {
+    transform: scale(1.025);
+}
+
+.card-body {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-size: .9rem;
+    padding: 0 var(--padding);
+    inline-size: 350px;
+    word-break:normal;
+}
+
+.card-footer {
+        border-radius: 15px;
+    margin-top: 1rem;
+    padding: var(--padding);
+    padding-top: 0;
+}
+
+.btn {
+    --color: hsl(0, 0%, 100%);
+    background: var(--color);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background: hsl(200, 50%, 60%);
+}
+
+.btn.btn-outline {
+    background: none;
+    border: 1px solid var(--color);
+    color: var(--color);
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus {
+    background: hsl(200, 50%, 90%);
+    transition: .5s ease-in-out;
+}
+
+.btn+.btn {
+    margin-left: .25rem;
+}
+
+
+.aboutme {
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+font: 35px;
+left: 25px;
+position: relative;
+}
+.tabs {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.tabs__label {
+    padding: 25px 26px;
+    cursor: pointer;
+    color:white
+}
+
+.tabs__radio {
+    display: none;
+}
+
+.tabs__content {
+    order: 1;
+    width: 100%;
+    line-height: 1.5;
+    display: none;
+    transition: 0.25s;
+    animation: 0.5s ease-in-out;
+}
+
+.tabs_content_media{
+        display:inline-block;
+        border-radius: 15px;
+        background-color: #272727a9;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: aliceblue;
+        position: relative;
+        top: 25%;
+        width: auto;
+        margin: 5px;
+        padding: 10px;
+}
+
+.tabs__radio:checked+.tabs__label {
+    font-weight: bold;
+    border-bottom: 2px solid #fafafa;
+    
+}
+
+
+.tabs__radio:checked+.tabs__label+.tabs__content {
+    display: initial;
+    color:white
+}
+
+
+
+
+.tabs__label:before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 61px;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease,  .5s ease;
+}
+
+
+
+.tabs__label:hover:before {
+    width: 25px;
+    background: #ffffff;
+    transition: width .5s ease;
+}
+
+.tabs__label:hover:after {
+    width: 25px;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
