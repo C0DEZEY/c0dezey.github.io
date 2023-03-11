@@ -65,5 +65,13 @@ function myFunction() {
     document.getElementById("arrow").style.display = "visable";
   }
 }
-
-
+var delay = 1000;
+const themebtn = document.getElementById("1")
+const thememenu = document.getElementById("2")
+themebtn.addEventListener("click", () => {
+  if (thememenu.classList.contains("visually-hidden")) {
+    thememenu.classList.remove("visually-hidden")
+  } else {
+    thememenu.classList.add("visually-hidden")
+  }
+})
