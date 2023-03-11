@@ -5,8 +5,18 @@
     text-decoration: none;
     
 }
+
+:root{
+--MainColor:rgb(255, 255, 255);
+--Pagebackround:#272727;
+--refsColor: #f7f3f3;
+--Subtitles: rgba(255, 255, 255, 0.548);
+--RefHover: rgb(29, 29, 29);
+--min: rgba(255, 255, 255, 0.548);
+}
+
 body {
-    background-color: #272727;
+    background-color: var(--Pagebackround);
     overflow-x: hidden;
 
     
@@ -26,7 +36,7 @@ body {
     border-radius: 10px;
 }
 h1,h2,h3,h4{
-    color: rgb(255, 255, 255);
+    color: var(--MainColor);
 
 }
 .main {
@@ -36,12 +46,30 @@ h1,h2,h3,h4{
 }
 .min {
             text-align: center;
-            color: rgba(255, 255, 255, 0.548);
+            color: var(--min);
             font-size: 25px;
 }
 .refs-container {
     text-align: center;
 }
+
+.thememenu {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 1.2rem;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    margin-top: 1%;
+    transition: 0.5s ease-in-out;
+    background: var(--refsColor);
+    color: var(--Pagebackround);
+    cursor: pointer;
+}
+
 
 .refs {
     border-radius: 360px;
@@ -55,14 +83,14 @@ h1,h2,h3,h4{
     align-items: center;
     margin: 0 10px;
     margin-top: 1%;
-    transition: background 0.5s ease-in-out;
-     background: #f7f3f3;
-     color: #272727;
+    transition: 0.5s ease-in-out;
+     background: var(--refsColor);
+     color: var(--Pagebackround);
 }
 
 .refs:hover {
-    background: rgb(164, 171, 255);
-    color: #ffffff;
+    background: var(--RefHover);
+    color: var(--MainColor);
     text-decoration: none;
 }
 
@@ -106,7 +134,7 @@ h1,h2,h3,h4{
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 16px solid white;
+  border-top: 16px solid var(--MainColor);
   animation: bounce 2s ease-in-out infinite;
 }
 
@@ -163,7 +191,7 @@ h1,h2,h3,h4{
 }
 
 .card .menu-content a {
-    color: #fff;
+    color: var(--MainColor);
 }
 
 .card .menu-content span {
@@ -177,7 +205,7 @@ h1,h2,h3,h4{
 }
 
 .card .wrapper {
-    background-color: #fff;
+    background-color: var(--MainColor);
     min-height: 540px;
     position: relative;
     overflow: hidden;
@@ -209,14 +237,15 @@ h1,h2,h3,h4{
 .card .text {
     height: 70px;
     margin: 0;
+    color: var(--Pagebackround);
 }
 
 .card .button {
 height: 20px;
 margin: 0;
 width: 25px;
-background-color: #272727;
-color: #ffff;
+background-color: var(--Pagebackround);
+color: var(--MainColor);
 padding: 12px;
 border-radius: 15px;
 cursor: pointer;
@@ -224,7 +253,7 @@ transition: color 0.5s linear;
 }
 
 .card .button:hover {
-    color: rgba(180, 180, 180, 0.966);
+    color: var(--Subtitles)
 }
 .card-1 .wrapper {
     border-radius: 15px;
@@ -232,12 +261,12 @@ transition: color 0.5s linear;
 
 
 .card-1 .content {
-    background-color: #fff;
-    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--MainColor);
+    box-shadow: 0 5px 30px 10px var(--Pagebackround)
 }
 
 .card-1 .title a {
-    color:#272727;
+    color:var(--Pagebackround);
 }
 
 @media only screen and (max-width: 767px) {
@@ -270,4 +299,103 @@ position: relative;
     opacity: 1;
     filter: blur(0);
     transform: translate(0);
+}
+
+.themebox {
+    background-color: var(--refsColor);
+    border-radius: 0.5rem;
+}
+
+.themebox>* {
+    margin: 0;
+}
+
+.themebox>*:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.visually-hidden {
+    opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-100%);
+        transition: all 1s;
+}
+
+.smoothslide {
+        opacity: 1;
+            filter: blur(0);
+            transform: translate(0);
+                transition: all 1s;
+}
+
+.theme-menu {
+    opacity: 1;
+    transition: opacity 0.25 ease-in-out;
+}
+
+.theme-menu.visually-hidden {
+    display: none;
+}
+
+
+.color-picker>fieldset {
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background: var(--refsColor);
+    padding: 5rem 5rem;
+    margin-inline: 58px;
+    margin-top: -6%;
+    border-radius: 5px;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: 3px solid var(--radio-color, currentcolor);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+/*  Color picker*/
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#dark {
+    --radio-color: rgb(3, 3, 3);
+}
+
+.color-picker input[type="radio"]#light {
+    --radio-color: rgb(182, 182, 182);
+}
+.dark {
+    --MainColor: rgb(255, 255, 255);
+    --Pagebackround: #272727;
+    --refsColor: #f7f3f3;
+    --Subtitles: rgba(255, 255, 255, 0.548);
+    --RefHover: rgb(29, 29, 29);
+}
+
+label{
+    color: var(--Pagebackround);
+}
+
+:root:has(#dark:checked) {
+--MainColor: rgb(255, 255, 255);
+    --Pagebackround: #272727;
+    --refsColor: #f7f3f3;
+    --Subtitles: rgba(255, 255, 255, 0.548);
+    --RefHover: rgb(29, 29, 29);
+    --min: rgba(255, 255, 255, 0.548);
+}
+
+:root:has(#light:checked) {
+        --MainColor:#272727; 
+        --Pagebackround: rgb(255, 255, 255);
+        --refsColor: #272727;
+        --Subtitles: rgba(29,29,29, 0.548);
+        --RefHover: rgb(185, 181, 181);
+        --min: rgba(53, 53, 53, 0.548);
 }
