@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../imgs/Codezey.png">
+    <title>Codezey | Discord Tools</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<style>
+.textbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 500px;
+  margin-right: 20px;
+}
+
+.webhook-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#webhook-info-container {
+  display: none;
+}
+    .textbox-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    
+    /* Style the text box */
+    .textbox {
+      flex: 1;
+      padding: 10px;
+      margin-right: 10px;
+      background-color: #40444b;
+      border: none;
+      border-radius: 5px;
+      color: #dcddde;
+      font-size: 16px;
+      outline: none;
+    }
+    
+    /* Style the send button */
+    .button-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .button {
+      padding: 10px 20px;
+      background-color: #7289da;
+      border: none;
+      border-radius: 5px;
+      color: #dcddde;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color .5s ease-in-out;
+      position: relative;
+
+    }
+    
+    /* Change the send button background color on hover */
+    .button:hover {
+      background-color: #5c6ca7;
+    }
+
+    .info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      position: absolute;
+    }
+</style>
+<body>
+    <section id="home" class="materhead">
+
+        <h1 class="main">Webhook Utils!<h1>
+            <div class="textbox-container">
+                <input id="webhook-input" type="text" class="textbox" placeholder="Enter Webhook URL">
+    </div>
+    <div class="textbox-container">
+            <input id="SendMessage" type="text" class="textbox">
+            <button id="sumbit" class="button">Send</button>
+            <button id="remove" class="button" style="margin-left: 20px;">Delete webhook</button>
+     </div>
+<div class="webhook-info-container">
+    <img id="webhook-avatar" class="avatar" src="../../imgs/Codezey.png">
+    <p id="webhook-name" class="name"> User</p>
+    <p id="webhook-server" class="name">Server</p>
+</div>
+    </section>
+</body>
+<script src="../../discord.js"></script>
